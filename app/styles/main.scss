@@ -1,0 +1,249 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+@import "variables";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import "theme";
+
+/* Space out content a bit */
+
+html, body, .wrapper {
+  height: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-size: 12px
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+
+.header,
+.content,
+.footer {
+  
+}
+
+.head-logo {
+  a {
+    position: absolute;
+    z-index: 1000;
+    width: 125px;
+    height: 97px;
+    margin: 0 0 0 20px;
+    background-image: url(../images/logo-1.png);
+    background-position: 50% 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.head-info {
+  background-color: #393536;
+  min-height: 40px;
+  .nav {
+    li {
+      text-align: right;
+    }
+  }
+}
+
+.head-contact {
+  @extend .hidden-xs;
+  float: right;
+  color: #fff;
+  div {
+    float: left;
+    padding: 10px;
+    span {
+      color: #6bc0bb;
+    }
+  }
+}
+
+.navbar-toggle {
+  position: relative;
+  z-index: 100;
+  color: #fff;
+  margin: 0;
+}
+
+.head-bg {
+  position: absolute;
+  top: 10%;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg-1.png);
+  background-position: 50% 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  div {
+    margin-top: 15%;
+    text-align: center;
+    h3, h4, h5 {
+      margin: 0 0 5px 0;
+      font-weight: normal;
+    }
+    h3 {
+      font-size: 13px;
+      color: #414042;
+    }
+    h4 {
+      font-size: 11px;
+      color: #bfbfc0;
+    }
+    h5 {
+      font-size: 10px;
+      color: #6bc0bb;
+    }
+  }
+}
+
+.parallax1 {
+  z-index: 1500;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 40px;
+  background: url(../images/p-1.png);
+  background-size: 100%;    
+}
+
+.main-carousel {
+  img {
+    width: 100%;
+  }
+  .carousel-caption {
+    height: 35%;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 0 0;
+    img {
+      margin: -80px 0 0 0;
+      -webkit-filter: blur(5px);
+      filter: blur(5px);
+      -moz-transform: scaleY(-.7);
+      -o-transform: scaleY(-.7);
+      -webkit-transform: scaleY(-.7);
+      transform:scaleY(-.7);
+    }
+  }
+}
+
+// .some {
+//   @extend .message;
+//   @extend .col-md-4;
+//   @include gradient-horizontal(#1834cc, #1dc937, 0%, 100%);
+//   @include border-top-radius(100px);
+// }
+
+.content {
+   height: 300px;
+}
+
+.footer {
+  height: 240px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .head-info {
+    .nav {
+      li {
+        float: left;
+      }
+    }
+  }
+  
+  .head-logo {
+    a {
+      width: 210px;
+      height: 134px;
+      left: 50%;
+      margin: 0 0 0 -105px;
+    }
+  }
+
+  .head-bg { 
+    top: 7%;
+    div {
+        margin-top: 15%;
+      h3, h4, h5 {
+        margin: 0 0 10px 0;
+      }
+      h3 {
+        font-size: 35px;
+        color: #414042;
+      }
+      h4 {
+        font-size: 18px;
+        color: #bfbfc0;
+      }
+      h5 {
+        font-size: 14px;
+        color: #6bc0bb;
+      }
+    }
+  }
+  
+  .main-carousel {
+    .carousel-caption {
+      img {
+        margin: -140px 0 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .head-logo {
+    a {
+      width: 420px;
+      height: 268px;
+      left: 50%;
+      margin: 0 0 0 -210px;
+    }
+  }
+
+  .head-bg { 
+    top: 19%;
+    div {
+        margin-top: 15%;
+      h3, h4, h5 {
+        margin: 0 0 17px 0;
+      }
+      h3 {
+        font-size: 50px;
+        color: #414042;
+      }
+      h4 {
+        font-size: 25px;
+        color: #bfbfc0;
+      }
+      h5 {
+        font-size: 16px;
+        color: #6bc0bb;
+      }
+    }
+  }
+
+  .parallax1 {
+    z-index: 1500;
+    position: absolute;
+    width: 100%;
+    height: 290px;
+    top: 20px;
+    background: url(../images/p-1.png);
+    background-size: 100%;    
+  }
+
+  .main-carousel {
+    .carousel-caption {
+      img {
+        margin: -240px 0 0 0;
+      }
+    }
+  }
+}
